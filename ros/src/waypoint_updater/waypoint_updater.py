@@ -76,7 +76,7 @@ class WaypointUpdater(object):
         # The stop is activated or deactivated with the last waypoint.
         self.force_stop_on_last_waypoint = rospy.get_param('~force_stop_on_last_waypoint', True)
         self.unsubscribe_base_wp = rospy.get_param('/unregister_base_waypoints', False)
-		# Brake activation on target.
+        # Brake activation on target.
         self.accel = rospy.get_param('~target_brake_accel', -1.0)
         # Distance in meters where the car will stop before the red light.
         self.stop_distance = rospy.get_param('~stop_distance', 5.0)

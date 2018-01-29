@@ -51,8 +51,8 @@ class DBWNode(object):
         self.throttle_pub = rospy.Publisher('/vehicle/throttle_cmd', ThrottleCmd, queue_size = 1)
         self.brake_pub = rospy.Publisher('/vehicle/brake_cmd', BrakeCmd, queue_size = 1)
         
-        # TODO: Create `TwistController` object
-        # self.controller = TwistController(<Arguments you wish to provide>)
+        # TODO: Create `Controller` object
+        # self.controller = Controller(<Arguments you wish to provide>)
         config = {
             'vehicle_mass': vehicle_mass,
             'fuel_capacity': fuel_capacity,
