@@ -15,12 +15,14 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 from light_classification.tl_classifier import TLClassifier
 
+
 STATE_COUNT_THRESHOLD = 3
 MEASURE_PERFORMANCE = False
 DISPLAY_CAMERA = False
 
 proc_time_sum = 0
 proc_iterations = 0
+
 
 class TLDetector(object):
     def __init__(self):
@@ -84,7 +86,7 @@ class TLDetector(object):
     def image_cb(self, msg):
         """Identifies red lights in the incoming camera image and publishes the index
             of the waypoint closest to the red light's stop line to /traffic_waypoint
-
+        
         Args:
             msg (Image): image from car-mounted camera
         
@@ -141,7 +143,8 @@ class TLDetector(object):
             int: index of the closest waypoint in self.waypoints
         
         """
-        # TODO implement
+        #TODO implement
+        #return 0
         index = -1
         
         # Return if way points are empty
@@ -154,7 +157,6 @@ class TLDetector(object):
         #rospy.loginfo('tl.detector.get_closest_waypoint({}) found at = {}, distance = {}, time = {}'.format(
         #    position, index, np.sqrt(dist_squared[index]), time.time() - t))
         
-        #return 0
         return index
     
     
